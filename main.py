@@ -7,10 +7,12 @@ print(f"Screen height: {SCREEN_HEIGHT}")
 
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
-while True:
+running = True
+while running:
     for event in pygame.event.get():
-    if event.type == pygame.QUIT:
-        return
+        if event.type == pygame.QUIT:
+            running = False
+            
     fill_color = (0,0,0)
     screen.fill(fill_color, rect=None)
     pygame.display.flip()
