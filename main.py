@@ -37,6 +37,10 @@ while running:
         if player.collides(asteroid) == True:
             print("Game over!")
             sys.exit()
+        for shot in shots_group:
+            if asteroid.collides(shot) == True:
+                asteroid.split             ()
+                shot.kill()
 
     fill_color = (0,0,0)
     screen.fill(fill_color, rect=None)
